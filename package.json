@@ -1,0 +1,17 @@
+{
+  "name": "lrestaura-pedidos",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "node start-client.js",
+    "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1"
+  },
+  "devDependencies": {
+    "concurrently": "3.1.0",
+    "nodemon": "^1.12.1"
+  }
+}
