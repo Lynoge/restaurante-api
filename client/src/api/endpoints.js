@@ -1,4 +1,4 @@
-export const API_ENDPOINT = 'http://localhost:3001/api'
+export const API_ENDPOINT = '/api'
 
 export const ORDERS = 'orders'
 export const ITEM = 'item'
