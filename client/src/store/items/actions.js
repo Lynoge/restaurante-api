@@ -1,22 +1,22 @@
 import * as types from './action-types.js'
-import { getOrders } from '../../api/orders.js'
+import { getItems } from '../../api/items.js'
 
-export function getOrdersAction () {
+export function getItemsAction () {
   return dispatch => {
     dispatch({
-      type: types.GET_ORDERS_REQUEST
+      type: types.GET_ITEMS_REQUEST
     })
 
-    return getOrders()
-      .then(({ orders }) => {
+    return getItems()
+      .then(({ items }) => {
         dispatch({
-          type: types.GET_ORDERS_SUCCESS,
-          orders
+          type: types.GET_ITEMS_SUCCESS,
+          items
         })
       })
       .catch(e => {
         dispatch({
-          type: types.GET_ORDERS_FAILURE,
+          type: types.GET_ITEMS_FAILURE,
           errorMessage: e.errors
         })
       })

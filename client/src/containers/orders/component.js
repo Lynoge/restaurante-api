@@ -10,27 +10,36 @@ export default class Orders extends Component {
   }
 
   render () {
-    const { orders } = this.props
+    const {
+      orders: {
+        requestStatus,
+        orders
+      } } = this.props
 
-    if (orders.requestStatus.loading) {
+    if (requestStatus.loading) {
       return <Loader />
-    } else if (orders.requestStatus.fail) {
+    } else if (requestStatus.fail) {
       return <ErrorMessage />
     } else {
       return (
         <table className='ui celled table'>
           <thead>
             <tr><th>Código</th>
-              <th>Items</th>
+              <th>Quant. de items</th>
               <th>Valor</th>
+              <th>Aprovar</th>
             </tr></thead>
           <tbody>
-            { orders.orders.map(order =>
-              <tr>
+            { orders.map(order =>
+              <tr key={order.id}>
                 <td>{ order.id }
                 </td>
                 <td>{ order.items }</td>
                 <td>{ order.value }</td>
+                <td><div className='ui toggle checkbox'>
+                  <input type='checkbox' name='public' />
+                  <label />
+                </div></td>
               </tr>) }
           </tbody>
         </table>

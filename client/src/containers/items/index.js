@@ -1,15 +1,13 @@
 import { connect } from 'react-redux'
 
-import { getOrdersAction } from '../../store/orders/actions.js'
+import { getItemsAction } from '../../store/items/actions.js'
 
 import Items from './component.js'
 
-const mapStateToProps = ({ orders }) => ({
-  orders
-})
+const mapStateToProps = ({ items }) => ({ items })
 
 const mapDispatchToProps = (dispatch) => ({
-  getOrders: () => dispatch(getOrdersAction())
+  getItems: () => dispatch(getItemsAction())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Items)

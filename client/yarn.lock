@@ -4641,6 +4641,10 @@ react-dom@15.4.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
+react-image-resizer@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-image-resizer/-/react-image-resizer-1.2.0.tgz#feb2aec32222e7a15b3dec2274b331d9077c36f5"
+
 react-redux@^5.0.6:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"

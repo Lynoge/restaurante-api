@@ -3,19 +3,19 @@ import * as types from './action-types.js'
 
 const initialState = {
   requestStatus: meta.REQUEST_STATUS_INITIAL,
-  orders: []
+  item: []
 }
 
-const orders = (state = initialState, action) => {
+const item = (state = initialState, action) => {
   switch (action.type) {
-    case types.GET_ORDERS_REQUEST:
+    case types.GET_ITEM_REQUEST:
       state.requestStatus = meta.REQUEST_STATUS_LOADING
       return { ...state }
-    case types.GET_ORDERS_SUCCESS:
-      state.orders = action.orders
+    case types.GET_ITEM_SUCCESS:
+      state.item = action.item
       state.requestStatus = meta.REQUEST_STATUS_SUCCESS
       return { ...state }
-    case types.GET_ORDERS_FAILURE:
+    case types.GET_ITEM_FAILURE:
       state.requestStatus = meta.REQUEST_STATUS_FAIL
       state.requestStatus.errorMessage = action.errorMessage
       return { ...state }
@@ -24,4 +24,4 @@ const orders = (state = initialState, action) => {
   }
 }
 
-export default orders
+export default item
