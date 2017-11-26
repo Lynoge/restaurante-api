@@ -1,9 +1,11 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 const Menu = () => (
   <div className='ui two item menu'>
-    <a className='active item'>Pedidos</a>
-    <a className='item'>Itens</a>
+    <Link className='item' to='/orders'>Pedidos</Link>
+    <Link className='item' to='/items'>Items</Link>
   </div>
 )
 
