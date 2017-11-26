@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React from 'react'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <p>Hi</p>
-      </div>
-    );
-  }
-}
+import 'semantic-ui-css/semantic.min.css'
 
-export default App;
+import Menu from './components/menu.js'
+
+const App = () => (
+  <div className='ui raised very padded text container segment center'>
+    <Menu />
+  </div>
+)
+
+export default App
