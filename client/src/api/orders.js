@@ -2,7 +2,7 @@ import axios from 'axios'
 
 import {
   ORDERS,
-  resources,
+  resources
 } from './endpoints.js'
 
 export const getOrders = () => {

@@ -3,7 +3,7 @@ import * as types from './action-types.js'
 
 const initialState = {
   requestStatus: meta.REQUEST_STATUS_INITIAL,
-  orders: [],
+  orders: []
 }
 
 const orders = (state = initialState, action) => {
@@ -23,6 +23,5 @@ const orders = (state = initialState, action) => {
       return state
   }
 }
-
 
 export default orders

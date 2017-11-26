@@ -4,7 +4,6 @@ import { Provider } from 'react-redux'
 
 import 'semantic-ui-css/semantic.min.css'
 
-import Menu from './components/menu.js'
 import Orders from './containers/orders'
 import createStore from './store'
 

@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
 
 export default class Orders extends Component {
-  componentDidMount() {
+  componentDidMount () {
     const { getOrders } = this.props
     getOrders()
   }
 
-  render() {
+  render () {
     const { orders } = this.props
 
     if (orders.requestStatus.loading) {
       return <p>Carregando</p>
-    }
-
-    else {
+    } else {
       return (
         <ul>
           { orders.orders.map(order => <li>{ order.name }</li>) }

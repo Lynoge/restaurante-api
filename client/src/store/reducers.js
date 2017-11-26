@@ -7,5 +7,5 @@ import orders from './orders/reducers'
 export default combineReducers({
 //  items,
 //  item,
-  orders,
+  orders
 })

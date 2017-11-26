@@ -1,6 +1,6 @@
 import {
   applyMiddleware,
-  createStore,
+  createStore
 } from 'redux'
 
 import thunk from 'redux-thunk'
@@ -13,7 +13,7 @@ middlewares.push(createLogger())
 
 const store = createStore(
   reducers,
-  applyMiddleware(...middlewares),
+  applyMiddleware(...middlewares)
 )
 
 export default () => store
